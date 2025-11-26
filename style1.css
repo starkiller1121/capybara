@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;        /* 佔滿整個視窗高度 */
+    height: 60vh;        /* 佔滿整個視窗高度 */
     padding: 20px 40px;   /* 與畫面邊界距離 */
     box-sizing: border-box;
 }
@@ -75,4 +75,5 @@ body {
     margin: 0;
     color: black;
     line-height: 1.2;
+
 }
