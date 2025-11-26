@@ -1,50 +1,78 @@
 body {
+    margin: 0;
     background-image: url(001.jpg);
-    text-align: center;
+    background-size: cover;
     font-family: Arial, sans-serif;
-
 }
 
+/* === 整個左右分欄 === */
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;        /* 佔滿整個視窗高度 */
+    padding: 20px 40px;   /* 與畫面邊界距離 */
+    box-sizing: border-box;
+}
+
+/* === 左區域（輪盤）=== */
+.left-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 輪盤 + 箭頭容器 */
 .wheel-container {
-  position: absolute;
-  top: 150px;         
-  left: 25%;
-  transform: translateX(-50%);
-
+    position: relative;
+    width: 700px;
+    height: 700px;
 }
 
+/* 輪盤 */
 #wheel {
     border: 5px solid #333;
     border-radius: 50%;
+    width: 700px;
+    height: 700px;
 }
 
-/* 🔺固定的箭頭指針🔺 */
+/* 箭頭 */
 .arrow-left {
-  position: absolute;
-  top: 340px;         
-  left: 100%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent; /* 上邊框，設為透明 */
-  border-bottom: 15px solid transparent; /* 下邊框，設為透明 */
-  border-right: 30px solid black; /* 右邊框，設為紅色 */
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 30px solid black;
 }
 
-.標1 {
-	font-family: "ㄅ字嗨注音黑體 Heavy";
-	font-size: 80px;
-	line-height: normal;
-	color: #000000;
-	position: absolute;
-	top: 170px; 
+/* 按鈕 */
+.spin-btn {
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
 }
 
-.標2 {
-	font-family: "ㄅ字嗨注音黑體 Heavy";
-	font-size: 80px;
-	line-height: normal;
-	color: #000000;
-	position: absolute;
-	top: 280px; 
+/* === 右邊：文字固定在右邊 === */
+.right-area {
+    width: 45%;
+    text-align: left;
+    background-position: center;
+    height: 100%;
+    padding-left: 40px;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+.標1, .標2 {
+    font-family: "ㄅ字嗨注音黑體 Heavy";
+    font-size: 80px;
+    margin: 0;
+    color: black;
+    line-height: 1.2;
 }
