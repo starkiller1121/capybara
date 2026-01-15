@@ -17,11 +17,11 @@ const segments = [
 const probabilities = [
   { label: "A 賞", weight: 0 },
   { label: "B 賞", weight: 0 },
-  { label: "C 賞", weight: 5 },
-  { label: "D 賞", weight: 10 },
+  { label: "C 賞", weight: 0 },
+  { label: "D 賞", weight: 0 },
   { label: "E 賞", weight: 20 },
   { label: "F 賞", weight: 50 },
-  { label: "特別賞", weight: 15 }
+  { label: "特別賞", weight: 30 }
 ];
 
 function weightedRandom() {
@@ -101,3 +101,4 @@ spinBtn.onclick = () => {
   requestAnimationFrame(animate);
 
 };
+
