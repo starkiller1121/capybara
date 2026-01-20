@@ -15,13 +15,13 @@ const segments = [
 
 // 抽獎機率
 const probabilities = [
-  { label: "A 賞", weight: 0 },
+  { label: "A 賞", weight: 0.01 },
   { label: "B 賞", weight: 0 },
   { label: "C 賞", weight: 0 },
   { label: "D 賞", weight: 0 },
-  { label: "E 賞", weight: 20 },
+  { label: "E 賞", weight: 40 },
   { label: "F 賞", weight: 50 },
-  { label: "特別賞", weight: 30 }
+  { label: "特別賞", weight: 9.99 }
 ];
 
 function weightedRandom() {
@@ -101,4 +101,5 @@ spinBtn.onclick = () => {
   requestAnimationFrame(animate);
 
 };
+
 
