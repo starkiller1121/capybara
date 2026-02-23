@@ -2,26 +2,23 @@ const canvas = document.getElementById("wheel");
 const ctx = canvas.getContext("2d");
 const spinBtn = document.getElementById("spinBtn");
 
+
 // 視覺輪盤設定（區塊大小）
 const segments = [
-  { label: "A 賞", angle: 20, color: "#EB3324" },
-  { label: "B 賞", angle: 30, color: "#FF7F27" },
-  { label: "C 賞", angle: 30, color: "#FFF200" },
-  { label: "D 賞", angle: 60, color: "#22B14C" },
-  { label: "E 賞", angle: 80, color: "#00A2E8" },
-  { label: "F 賞", angle: 100, color: "#A349A4" },
-  { label: "特別賞", angle: 40, color: "#FF91CB" }
+  { label: "A 賞", angle: 30, color: "#ED1C24" },
+  { label: "2000 點", angle: 60, color: "#00A2E8" },
+  { label: "1000 點", angle: 100, color: "#FFF200" },
+  { label: "F 賞", angle: 100, color: "#22B14C" },
+  { label: "500 點", angle: 70, color: "#A349A4" }
 ];
 
 // 抽獎機率
 const probabilities = [
   { label: "A 賞", weight: 1 },
-  { label: "B 賞", weight: 0 },
-  { label: "C 賞", weight: 0 },
-  { label: "D 賞", weight: 0 },
-  { label: "E 賞", weight: 40 },
+  { label: "2000 點", weight: 15 },
+  { label: "1000 點", weight: 25 },
   { label: "F 賞", weight: 50 },
-  { label: "特別賞", weight: 9 }
+  { label: "500 點", weight: 9 }
 ];
 
 function weightedRandom() {
@@ -101,6 +98,7 @@ spinBtn.onclick = () => {
   requestAnimationFrame(animate);
 
 };
+
 
 
 
