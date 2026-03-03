@@ -14,7 +14,7 @@ const segments = [
 
 // 抽獎機率
 const probabilities = [
-  { label: "A 賞", weight: 1 },
+  { label: "A 賞", weight: 5 },
   { label: "2000 點", weight: 15 },
   { label: "1000 點", weight: 25 },
   { label: "F 賞", weight: 50 },
@@ -98,6 +98,7 @@ spinBtn.onclick = () => {
   requestAnimationFrame(animate);
 
 };
+
 
 
 
